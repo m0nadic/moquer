@@ -1,0 +1,39 @@
+version: "1.0"
+services:
+  invoices:
+    port: 9920
+    routes:
+    - method: GET
+      pattern: /v1/invoices
+      response:
+        type: file
+        value: invoices/list.json
+        status: 200
+    - method: GET
+      pattern: /v1/invoices/:id
+      response:
+        type: file
+        value: invoices/detail.json
+        status: 200
+  payments:
+    port: 9910
+    routes:
+    - method: GET
+      pattern: /v1/payments
+      response:
+        type: file
+        value: payments/list.json
+        status: 200
+    - method: GET
+      pattern: /v1/payments/:id
+      response:
+        type: file
+        value: payments/detail.json
+        status: 200
+    - method: GET
+      pattern: /v1/ping
+      response:
+        type: string
+        value: PONG
+        status: 200
+

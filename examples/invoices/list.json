@@ -1,0 +1,32 @@
+[
+  {
+    "id": "356bcfed-d896-421d-b29d-e782429788b6",
+    "account_country": "US",
+    "amount_due": 999,
+    "amount_paid": 999,
+    "payment": "ed6688dc-38e9-4f1e-8bda-05b398bded20",
+    "created": 1489789429,
+    "currency": "usd",
+    "status": "paid"
+  },
+  {
+    "id": "99da3d70-1d72-4110-bc57-67af3f734632",
+    "account_country": "US",
+    "amount_due": 999,
+    "amount_paid": 999,
+    "payment": "27d3ea85-2e13-4506-a1aa-6abcdcdafc3c",
+    "created": 1489789429,
+    "currency": "usd",
+    "status": "paid"
+  },
+  {
+    "id": "02057ae9-e127-4da7-9353-48586133372c",
+    "account_country": "US",
+    "amount_due": 999,
+    "amount_paid": 999,
+    "payment": "045eca98-79a7-422c-9365-de142dc6041c",
+    "created": 1489789429,
+    "currency": "usd",
+    "status": "paid"
+  }
+]
