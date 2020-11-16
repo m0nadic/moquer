@@ -3,6 +3,7 @@ package models
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/m0nadic/moquer/util"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -68,7 +69,7 @@ func MakeHandler(response *Response) gin.HandlerFunc {
 		return func(c *gin.Context) {
 			data, _ := ioutil.ReadFile(response.Value)
 			t, _ := template.New("response").Parse(string(data))
-			_ = t.Execute(c.Writer, nil)
+			_ = t.Execute(c.Writer, util.Payload{c})
 		}
 	default:
 		return func(c *gin.Context) {

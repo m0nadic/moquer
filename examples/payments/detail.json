@@ -1,7 +1,8 @@
 {
-  "id": "60b5cb14-7a8f-4fe8-990b-9ff21d554cf3",
+  "id": {{ .PP "id" }},
+  "payment_id": {{ .PPQ "id" }}
   "amount": 500,
   "created": 1605432514,
   "currency": "usd",
-  "order": "548bfe86-4f08-4ecd-be5d-e48156c5785c\n"
+  "order": "548bfe86-4f08-4ecd-be5d-e48156c5785c"
 }
