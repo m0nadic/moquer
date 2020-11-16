@@ -1,8 +1,11 @@
 [
     {{range $i, $e := seq 2 }}{
-        "id":       "{{ UUID }}",
-        "name":     "{{ name }}",
-        "email":    "{{ email }}",
-        "zip_code": "{{ zip }}"
+        "id":        "{{ UUID }}",
+        "name":      "{{ name }}",
+        "email":     "{{ email }}",
+        "zip_code":  "{{ zip }}",
+        "card":      "{{ ccNo }}",
+        "client_ip": "{{ IPv4  }}",
+        "avatar":    "{{ image 10 10 }}"
     }{{ if ne $e 2 }},{{ end }} {{ end }} 
 ]
