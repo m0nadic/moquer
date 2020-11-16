@@ -1,7 +1,6 @@
 package util
 
 import (
-	"github.com/brianvoe/gofakeit/v5"
 	"github.com/gin-gonic/gin"
 )
 

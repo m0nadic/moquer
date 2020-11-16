@@ -1,20 +1,20 @@
 [
   {
-    "id": "{{ .UUID }}",
+    "id": "{{ guid }}",
     "amount": 100,
     "created": 1605432514,
     "currency": "usd",
     "order": "20c806ab-b5c0-41cf-aa6d-e46924265379"
   },
   {
-    "id": "{{ .UUID }}",
+    "id": "{{ guid }}",
     "amount": 200,
     "created": 1605432514,
     "currency": "usd",
     "order": "f05754d3-3b20-402b-a971-f09fbb36de79"
   },
   {
-    "id": "{{ .UUID }}",
+    "id": "{{ guid }}",
     "amount": 500,
     "created": 1605432514,
     "currency": "usd",

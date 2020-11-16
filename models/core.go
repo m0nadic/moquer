@@ -28,7 +28,7 @@ type Service struct {
 	Routes []*Route
 }
 
-func (s *Service) SetName(name string)  {
+func (s *Service) SetName(name string) {
 	s.name = name
 }
 
@@ -59,6 +59,7 @@ func (s *Service) Addr() string {
 	return fmt.Sprintf("0.0.0.0:%d", s.Port)
 }
 
+
 func MakeHandler(response *Response) gin.HandlerFunc {
 	switch response.Type {
 	case "string":
@@ -68,7 +69,10 @@ func MakeHandler(response *Response) gin.HandlerFunc {
 	case "file":
 		return func(c *gin.Context) {
 			data, _ := ioutil.ReadFile(response.Value)
-			t, _ := template.New("response").Parse(string(data))
+			t, _ := template.New("response").
+				Funcs(util.FakerFuncs).
+				Funcs(util.HelperFuncs).
+				Parse(string(data))
 			_ = t.Execute(c.Writer, util.Payload{c})
 		}
 	default:

@@ -1,0 +1,6 @@
+{
+    "id": "{{ UUID }}",
+    "name": "{{ name }}",
+    "email": "{{ email }}",
+    "zip_code": "{{ zip }}"
+}
