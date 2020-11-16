@@ -16,6 +16,10 @@ func SampleConfig() *models.Config {
 							Type:  "file",
 							Value: "payments/list.json",
 							Status: 200,
+							Headers: map[string]string{
+								"Content-Type": "application/json",
+								"Cache-Control": "max-age=3600",
+							},
 						},
 					},
 					{
@@ -25,6 +29,10 @@ func SampleConfig() *models.Config {
 							Type:  "file",
 							Value: "payments/detail.json",
 							Status: 200,
+							Headers: map[string]string{
+								"Content-Type": "application/json",
+								"Cache-Control": "max-age=3600",
+							},
 						},
 					},
 					{
@@ -34,6 +42,10 @@ func SampleConfig() *models.Config {
 							Type:  "string",
 							Value: "PONG",
 							Status: 200,
+							Headers: map[string]string{
+								"Content-Type": "application/json",
+								"Cache-Control": "max-age=3600",
+							},
 						},
 					},
 				},
@@ -48,6 +60,10 @@ func SampleConfig() *models.Config {
 							Type: "file",
 							Value: "invoices/list.json",
 							Status: 200,
+							Headers: map[string]string{
+								"Content-Type": "application/json",
+								"Cache-Control": "max-age=3600",
+							},
 						},
 					},
 					{
@@ -57,6 +73,10 @@ func SampleConfig() *models.Config {
 							Type: "file",
 							Value: "invoices/detail.json",
 							Status: 200,
+							Headers: map[string]string{
+								"Content-Type": "application/json",
+								"Cache-Control": "max-age=3600",
+							},
 						},
 					},
 				},

@@ -14,6 +14,7 @@ type Response struct {
 	Type   string
 	Value  string
 	Status int
+	Headers map[string]string
 }
 
 type Route struct {
@@ -64,10 +65,16 @@ func MakeHandler(response *Response) gin.HandlerFunc {
 	switch response.Type {
 	case "string":
 		return func(c *gin.Context) {
+			for key, value := range response.Headers {
+				c.Header(key, value)
+			}
 			_, _ = fmt.Fprintln(c.Writer, response.Value)
 		}
 	case "file":
 		return func(c *gin.Context) {
+			for key, value := range response.Headers {
+				c.Header(key, value)
+			}
 			data, _ := ioutil.ReadFile(response.Value)
 			t, _ := template.New("response").
 				Funcs(util.FakerFuncs).

@@ -9,12 +9,18 @@ services:
         type: file
         value: invoices/list.json
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
     - method: GET
       pattern: /v1/invoices/:id
       response:
         type: file
         value: invoices/detail.json
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
   payments:
     port: 9910
     routes:
@@ -24,6 +30,9 @@ services:
         type: file
         value: payments/list.json
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
     - method: GET
       pattern: /v1/payments/:id
       response:
@@ -36,6 +45,9 @@ services:
         type: string
         value: PONG
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
   users:
     port: 9930
     routes:
@@ -45,17 +57,24 @@ services:
         type: file
         value: users/list.json
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
     - method: GET
       pattern: /v1/users/:id
       response:
         type: file
         value: users/detail.json
         status: 200
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
     - method: POST
       pattern: /v1/users
       response:
         type: file
         value: users/create.json
         status: 200
-
-
+        headers:
+          Cache-Control: max-age=3600
+          Content-Type: application/json
