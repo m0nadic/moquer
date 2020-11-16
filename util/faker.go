@@ -31,7 +31,7 @@ var FakerFuncs = template.FuncMap{
 	"latitude":             gofakeit.Latitude,
 	"longitude":            gofakeit.Longitude,
 	"date":                 gofakeit.Date,
-	"nanoSecond":           gofakeit.NanoSecond,
+	"nanosecond":           gofakeit.NanoSecond,
 	"second":               gofakeit.Second,
 	"minute":               gofakeit.Minute,
 	"hour":                 gofakeit.Hour,

@@ -6,6 +6,7 @@
         "zip_code":  "{{ zip }}",
         "card":      "{{ ccNo }}",
         "client_ip": "{{ IPv4  }}",
-        "avatar":    "{{ image 10 10 }}"
+        "avatar":    "{{ image 10 10 }}",
+        "created_at": {{ nanosecond }}
     }{{ if ne $e 2 }},{{ end }} {{ end }} 
 ]

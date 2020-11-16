@@ -1,6 +1,10 @@
 {
-    "id": "{{ UUID }}",
-    "name": "{{ name }}",
-    "email": "{{ email }}",
-    "zip_code": "{{ zip }}"
+    "id":        "{{ UUID }}",
+    "name":      "{{ name }}",
+    "email":     "{{ email }}",
+    "zip_code":  "{{ zip }}",
+    "card":      "{{ ccNo }}",
+    "client_ip": "{{ IPv4  }}",
+    "avatar":    "{{ image 10 10 }}",
+    "created_at": {{ nanosecond }}
 }
